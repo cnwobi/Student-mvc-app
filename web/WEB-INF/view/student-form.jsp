@@ -24,7 +24,11 @@
         <form:options items="${student.countryoptions}"/>
     </form:select>
     <br><br>
-
+Operating Systems:
+    Linux<form:checkbox path="operatingSystems" value="Linux"/>
+    Ms Windows<form:checkbox path="operatingSystems" value="Ms Windows"/>
+    MAC OS<form:checkbox path="operatingSystems" value="MAC OS"/>
+    <br><br>
 
     <input type="submit" value="Submit"/>
 
