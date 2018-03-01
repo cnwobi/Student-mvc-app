@@ -8,9 +8,10 @@
 </head>
 <body>
 <form:form action="processForm" modelAttribute="student">
-    FIrst name:<form:input path="firstName"/>
+    First name:<form:input path="firstName"/>
     <br> <br>
     Last name: <form:input path="lastName"/>
+    <form:errors path="lastName" cssClass="error"/>
 <br><br>
 
     Favourite Language:
