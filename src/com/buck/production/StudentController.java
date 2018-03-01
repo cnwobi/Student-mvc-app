@@ -26,6 +26,8 @@ public class StudentController {
     }
     @RequestMapping("/processForm")
     public String processForm (@Valid @ModelAttribute("student") Student theStudent, BindingResult theBindingresult) {
+
+      // validation logic
         if (theBindingresult.hasErrors()) {
             return "student-form";
         } else {
@@ -33,6 +35,8 @@ public class StudentController {
         }
 
     }
+    /* Trime leading and trailing whitespcaes
+    and return null if all entries are white spaces*/
     @InitBinder
     public void initBinder(WebDataBinder dataBinder) {
         StringTrimmerEditor stringTrimmerEditor= new StringTrimmerEditor(true);
