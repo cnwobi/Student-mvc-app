@@ -12,13 +12,21 @@
     <br> <br>
     Last name: <form:input path="lastName"/>
 <br><br>
+
+    Favourite Language:
+    <form:radiobuttons path="favouriteLanguage" items="${student.favouriteLanguageOptions}"/>
+        <br><br>
+
+
     Country:
     <form:select path="country">
         <form:option value="" label="Please"/>
         <form:options items="${student.countryoptions}"/>
     </form:select>
+    <br><br>
 
-    <input type="submit" value="submit"/>
+
+    <input type="submit" value="Submit"/>
 
 
 
