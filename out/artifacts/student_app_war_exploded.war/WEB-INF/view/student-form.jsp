@@ -13,10 +13,14 @@
     Last name: <form:input path="lastName"/>
     <form:errors path="lastName" cssClass="error"/>
 <br><br>
-
+    Number of Courses registered:
+    <form:input path="coursesOfferred"/>
+    <form:errors path="coursesOfferred" cssClass="error"/>
+    <br><br>
     Favourite Language:
     <form:radiobuttons path="favouriteLanguage" items="${student.favouriteLanguageOptions}"/>
         <br><br>
+
 
 
     Country:

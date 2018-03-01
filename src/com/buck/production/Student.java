@@ -1,5 +1,7 @@
 package com.buck.production;
 
+import javax.validation.constraints.Max;
+import javax.validation.constraints.Min;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
 import java.util.LinkedHashMap;
@@ -8,27 +10,32 @@ public class Student {
     private String firstName;
 
     @NotNull(message = "Please enter your last name")
-    @Size(min=1,message="is required")
+    @Size(min = 1, message = "is required")
     private String lastName;
     private String country;
-    private LinkedHashMap<String,String> countryoptions;
-    private LinkedHashMap<String,String> favouriteLanguageOptions;
+    private LinkedHashMap<String, String> countryoptions;
+    private LinkedHashMap<String, String> favouriteLanguageOptions;
     private String favouriteLanguage;
-    private String [] operatingSystems;
-    public Student(){
+    private String[] operatingSystems;
+    @Min(value = 0,message="must be greater than or equal to zero")
+    @Max(value = 5, message="must less than or equal to 5")
+    private int coursesOfferred;
+
+
+    public Student() {
 
         // intialize and population country options
-      countryoptions= new LinkedHashMap<>();
-        getCountryoptions().put("GB","Britain");
+        countryoptions = new LinkedHashMap<>();
+        getCountryoptions().put("GB", "Britain");
         getCountryoptions().put("AU", "Australia");
-        getCountryoptions().put ("NGA","Nigeria");
+        getCountryoptions().put("NGA", "Nigeria");
 // parameter order: value, display label
 
-        favouriteLanguageOptions= new LinkedHashMap<>();
-        getFavouriteLanguageOptions().put("Java","Java");
-        getFavouriteLanguageOptions().put("C#","C#");
-        getFavouriteLanguageOptions().put("Ruby","Ruby");
-        getFavouriteLanguageOptions().put("PHP","PHP");
+        favouriteLanguageOptions = new LinkedHashMap<>();
+        getFavouriteLanguageOptions().put("Java", "Java");
+        getFavouriteLanguageOptions().put("C#", "C#");
+        getFavouriteLanguageOptions().put("Ruby", "Ruby");
+        getFavouriteLanguageOptions().put("PHP", "PHP");
 
     }
 
@@ -87,6 +94,14 @@ public class Student {
 
     public void setOperatingSystems(String[] operatingSystems) {
         this.operatingSystems = operatingSystems;
+    }
+
+    public int getCoursesOfferred() {
+        return coursesOfferred;
+    }
+
+    public void setCoursesOfferred(int coursesOfferred) {
+        this.coursesOfferred = coursesOfferred;
     }
 }
 

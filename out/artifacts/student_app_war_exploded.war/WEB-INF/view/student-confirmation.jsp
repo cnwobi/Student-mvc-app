@@ -26,6 +26,8 @@ Operating Systems:
 ${temp}
     </li>
     </c:forEach>
+    <br><br>
+    Number of Courses Offered: ${student.coursesOfferred}
 </ul>
 </body>
 
