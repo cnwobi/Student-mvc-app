@@ -17,6 +17,8 @@ The Student is confirmed: ${student.firstName} ${student.lastName}
 
 Favourite Programming Language :${student.favouriteLanguage}
 <br><br>
+PostCode:${student.postCode}
+<br><br>
 Country : ${student.country}
 <br><br>
 Operating Systems:

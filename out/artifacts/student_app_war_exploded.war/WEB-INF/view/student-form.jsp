@@ -20,7 +20,10 @@
     Favourite Language:
     <form:radiobuttons path="favouriteLanguage" items="${student.favouriteLanguageOptions}"/>
         <br><br>
-
+Postcode:
+    <form:input path="postCode"/>
+    <form:errors path="postCode" cssClass="error"/>
+    <br><br>
 
 
     Country:
